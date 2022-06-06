@@ -13,38 +13,41 @@
 
   <body>
   <% if @current_user %>
-      <nav class="navbar navbar-expand-lg bg-light">
+      <nav class="navbar navbar-expand-lg bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Hi <%= @current_user["username"] %>!</a>
+        <a class="navbar-brand" style="color: #FFFFFF" href="#">Hi <%= @current_user["username"] %>!</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/places">Home</a>
+              <a class="nav-link active" aria-current="page" style="color: #FFFFFF" href="/places">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/logout">Logout</a>
+              <a class="nav-link" style="color: #FFFFFF" href="/logout">Logout</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 <% else %>
-      <nav class="navbar navbar-expand-lg bg-light">
+      <nav class="navbar navbar-expand-lg bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Welcome!</a>
+        <a class="navbar-brand" style="color: #FFFFFF" href="#">Welcome!</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="/login">Login</a>
+              <a class="nav-link active" aria-current="page" style="color: #FFFFFF" href="/places">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/users/new">Signup</a>
+              <a class="nav-link" style="color: #FFFFFF" href="/login">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: #FFFFFF" href="/users/new">Signup</a>
             </li>
           </ul>
         </div>
@@ -53,10 +56,13 @@
 <% end %>
 
 
-    <p>
-      <%= flash["notice"] %>
-    </p>
 
+<div class="mx-auto" style="width: 200px;">
+  <%= flash["notice"] %>
+</div>
+
+    <div class="container">
     <%= yield %>
+    </div>
   </body>
 </html>
