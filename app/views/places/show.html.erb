@@ -2,7 +2,10 @@
 
 <% if @current_user %>
 
-  <h2>My Posts</h2>
+  <p>
+  <a href="/posts/new?place_id=<%= @place["id"] %>" class="btn btn-success btn-lg">New Post</a>
+  </p>
+
   <div class="row">
     <% for post in @posts %>
     <div class="col-md-4">
@@ -17,14 +20,9 @@
       </div>
     <% end %>
   </div>
+  <p>
+</p>
 <% end %>
-
-<p>
-</p>
-
-<p>
-  <a href="/posts/new?place_id=<%= @place["id"] %>" class="btn btn-primary">New Post</a>
-</p>
 
 <p>
   <a href="/places" class="btn btn-secondary">Back to All Places</a>
