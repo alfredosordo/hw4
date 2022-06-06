@@ -27,6 +27,6 @@ test:
 production:
   <<: *default
   adapter: postgresql
-  database: entr451finalexamalfredosordo_production
-  username: entr451finalexamalfredosordo
+  database: finalexamalfredosordo_production
+  username: finalexamalfredosordo
   password: <%= ENV["MY_APP_DATABASE_PASSWORD"] %>
